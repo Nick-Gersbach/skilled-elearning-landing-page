@@ -56,7 +56,7 @@ header {
 }
 
 .bottom__header__text {
-  padding-top: 5rem;
+  padding-top: 9rem;
 }
 
 .bottom__header__text h1 {
@@ -67,10 +67,40 @@ header {
   padding-bottom: 2rem;
 }
 
+.bottom__header__text p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #83869a;
+  width: 40%;
+  padding-bottom: 2rem;
+}
+
+.bottom__header__text button {
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 28px;
+  color: #fff;
+  background: rgb(255, 0, 164);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 0, 164, 1) 0%,
+    rgba(255, 93, 68, 1) 100%
+  );
+  width: 167px;
+  height: 56px;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.bottom__header__text button:hover {
+  opacity: 0.9;
+}
+
 .bottom__header__img img {
   position: absolute;
-  top: -18%;
-  right: 0%;
+  top: -12%;
+  right: 6%;
   transform: translateX(340px);
 }
 
