@@ -1,8 +1,26 @@
+/* 
+
+
+
+
+
+
+Global Styles
+
+
+
+
+
+
+
+
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.7;
 }
 
 .container {
@@ -10,6 +28,24 @@
   max-width: 1100px;
   margin: auto;
 }
+
+/* 
+
+
+
+
+
+
+Header
+
+
+
+
+
+
+
+
+*/
 
 header {
   height: 100vh;
@@ -47,6 +83,24 @@ header {
   cursor: pointer;
   opacity: 0.9;
 }
+
+/* 
+
+
+
+
+
+
+Bottom Header
+
+
+
+
+
+
+
+
+*/
 
 .bottom__header__container {
   padding: 2rem 0rem;
@@ -97,22 +151,135 @@ header {
   opacity: 0.9;
 }
 
-.bottom__header__img img {
+.bottom__header__img img.desktop__hero {
   position: absolute;
   top: -12%;
   right: 6%;
   transform: translateX(340px);
 }
 
+.bottom__header__img img.tablet__hero {
+  display: none;
+}
+
+.bottom__header__img img.mobile__hero {
+  display: none;
+}
+
+/* 
+
+
+
+
+
+
+Media Queries
+
+
+
+
+
+
+
+
+*/
+
+/* 
+
+
+
+Tablet
+
+
+
+*/
+
+@media only screen and (max-width: 1024px) {
+  .bottom__header__text {
+    padding-top: 3rem;
+  }
+
+  .bottom__header__img img.desktop__hero {
+    display: none;
+  }
+
+  .bottom__header__img img.mobile__hero {
+    display: none;
+  }
+
+  .bottom__header__img img.tablet__hero {
+    display: block;
+    position: absolute;
+    top: -2%;
+    right: 9%;
+    transform: translateX(340px);
+  }
+}
+
+/* 
+
+
+
+Mobile Portrait
+
+
+
+*/
+
 @media only screen and (max-width: 600px) {
+  header {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
   .header__logo img {
     width: 89px;
   }
 
   .cta__btn__dark {
     font-size: 16px;
-
     width: 140px;
     height: 48px;
+  }
+
+  .bottom__header__container {
+    padding: 0rem;
+    width: 90%;
+    margin: auto;
+  }
+
+  .bottom__header__text {
+    padding-top: 0rem;
+  }
+
+  .bottom__header__text h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #13183f;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  .bottom__header__text p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .bottom__header__img img.desktop__hero {
+    display: none;
+  }
+
+  .bottom__header__img img.tablet__hero {
+    display: none;
+  }
+
+  .bottom__header__img {
+    margin: 2rem auto;
+  }
+
+  .bottom__header__img img.mobile__hero {
+    display: block;
+    width: 100%;
   }
 }
